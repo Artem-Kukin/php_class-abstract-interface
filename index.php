@@ -91,6 +91,7 @@ do {
                     echo $item->employee() . PHP_EOL;
                 }
             }
+            
             echo  "\033[32m  Выделяемая заработная плата на Директора: "  . array_sum($salary) . ' (руб)' . "\033[0m"  . PHP_EOL;
             break;
 
@@ -128,7 +129,7 @@ do {
                     $salary[] = $item->salaryPosition();
                 }
             }
-            echo  "\033[32m  Выделяемая заработная плата на Отдел IT: "  . array_sum($salary) . ' (руб)' . "\033[0m"  . PHP_EOL;
+            echo "\033[32m Всего сотрудников в отделе: " . count($employee)  . " и выделенная заработная плата на Отдел IT: "  . array_sum($salary) . ' (руб)' . "\033[0m"  . PHP_EOL;
             break;
     }
 } while ($init > 0);
